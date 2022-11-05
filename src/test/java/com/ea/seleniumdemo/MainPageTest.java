@@ -21,6 +21,10 @@ public class MainPageTest extends Base{
 
         WebElement searchField = driver.findElement(By.cssSelector("[data-test='search-input']"));
         searchField.sendKeys("Selenium");
+        
+        //Chrome driver
+        System.setProperty("webdriver.chrome.driver", "C:\\Libs\\chromedriver.exe");
+        base.Driver = new ChromeDriver();
 
         WebElement submitButton = driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
         submitButton.click();
